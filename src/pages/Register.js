@@ -61,6 +61,8 @@ const Register = () => {
           <Input placeholder="Last Name" />
           <Input placeholder="Username" />
           <Input placeholder="Email" />
+          <Input placeholder="Department" />
+          <Input placeholder="Passout Year" />
           <Input placeholder="Password" />
           <Input placeholder="Confirm Password" />
           <Agreement>

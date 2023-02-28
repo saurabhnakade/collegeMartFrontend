@@ -76,7 +76,7 @@ const Footer = () => {
     <Container>
       <Left>
         <Logo>CollegeMart</Logo>
-        <Desc>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable.</Desc>
+        <Desc>Web application that facilitates the exclusive selling of products between seniors and juniors in a college</Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">
             <Facebook />

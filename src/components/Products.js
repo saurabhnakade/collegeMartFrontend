@@ -6,14 +6,16 @@ const Container = styled.div`
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 `;
 
-const Products = () => {
+const Products = ({ cat }) => {
+  console.log(cat);
   return (
     <Container>
       {popularProducts.map((item) => (
-        <Product item={item} key={item.id} />
+        (cat==null || cat==="All" || item.category===cat )?
+        <Product item={item} key={item.id} />:<div></div>
       ))}
     </Container>
   );

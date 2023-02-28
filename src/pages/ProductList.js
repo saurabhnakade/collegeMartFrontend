@@ -5,6 +5,7 @@ import Products from "../components/Products";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 import { mobile } from "../responsive";
+import { useState } from "react";
 
 const Container = styled.div``;
 
@@ -34,6 +35,11 @@ const Select = styled.select`
 const Option = styled.option``;
 
 const ProductList = () => {
+  const [filter, setFilter] = useState();
+
+  const filterHandler = (e) => {
+    setFilter(e.target.value);
+  };
   return (
     <Container>
       <Navbar />
@@ -42,26 +48,18 @@ const ProductList = () => {
       <FilterContainer>
         <Filter>
           <FilterText>Filter Products:</FilterText>
-          <Select>
+          <Select onChange={filterHandler}>
             <Option disabled selected>
               Category
             </Option>
-            <Option>Stationery</Option>
-            <Option>Gadgets</Option>
-            <Option>Study Material</Option>
+            <Option>Books</Option>
+            <Option>Apparatus</Option>
+            <Option>Electronic Gadgets</Option>
             <Option>Apparel</Option>
-          </Select>
-          <Select>
-            <Option disabled selected>
-              Year
-            </Option>
-            <Option>1st</Option>
-            <Option>2nd</Option>
-            <Option>3rd</Option>
-            <Option>4th</Option>
+            <Option>All</Option>
           </Select>
         </Filter>
-        <Filter>
+        {/* <Filter>
           <FilterText>Sort Products:</FilterText>
           <Select>
             <Option disabled selected>
@@ -72,10 +70,9 @@ const ProductList = () => {
             <Option>Seller's Year</Option>
             <Option>Bargain Tendency</Option>
           </Select>
-        </Filter>
+        </Filter> */}
       </FilterContainer>
-      <Products />
-      <Newsletter />
+      <Products cat={filter} />
       <Footer />
     </Container>
   );
