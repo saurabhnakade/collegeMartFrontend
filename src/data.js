@@ -48,40 +48,48 @@ export const popularProducts = [
     id: 1,
     img: "https://thumbs.dreamstime.com/b/physics-books-student-hands-young-lady-hold-his-couple-36596834.jpg",
     category: "Books",
+    price: 23,
   },
   {
     id: 2,
     img: "https://thumbs.dreamstime.com/z/engineering-tools-5313815.jpg",
     category: "Apparatus",
+    price: 84,
   },
   {
     id: 3,
     img: "https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=800",
     category: "Electronic Gadgets",
+    price: 34,
   },
   {
     id: 4,
     img: "https://www.shambhaviimpex.com/prd/mini-drafter-machine--250x250.jpg",
     category: "Apparatus",
+    price: 63,
   },
   {
     id: 5,
     img: "https://m.media-amazon.com/images/I/81NF2zZBTrL._SY550_.jpg",
     category: "Apparatus",
+    price: 46,
   },
   {
     id: 6,
     img: "https://d3o2e4jr3mxnm3.cloudfront.net/Rocket-Vintage-Chill-Cap_66374_1_lg.png",
     category: "Apparel",
+    price: 98,
   },
   {
     id: 7,
     img: "https://thumbs.dreamstime.com/b/engineers-books-physics-table-inside-library-36597112.jpg",
     category: "Books",
+    price: 14,
   },
   {
     id: 8,
     img: "https://thumbs.dreamstime.com/z/engineering-tools-16043173.jpg",
     category: "Apparatus",
+    price: 42,
   },
 ];

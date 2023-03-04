@@ -40,11 +40,12 @@ const ProductList = () => {
   const filterHandler = (e) => {
     setFilter(e.target.value);
   };
+
   return (
     <Container>
       <Navbar />
       <Announcement />
-      <Title>Products</Title>
+      <Title>{filter === "All" || filter === undefined ? "Products" : filter}</Title>
       <FilterContainer>
         <Filter>
           <FilterText>Filter Products:</FilterText>
@@ -59,18 +60,16 @@ const ProductList = () => {
             <Option>All</Option>
           </Select>
         </Filter>
-        {/* <Filter>
+        <Filter>
           <FilterText>Sort Products:</FilterText>
           <Select>
             <Option disabled selected>
               NULL
             </Option>
-            <Option>Price</Option>
-            <Option>Dated</Option>
-            <Option>Seller's Year</Option>
-            <Option>Bargain Tendency</Option>
+            <Option>Price Asc</Option>
+            <Option>Price Desc</Option>
           </Select>
-        </Filter> */}
+        </Filter>
       </FilterContainer>
       <Products cat={filter} />
       <Footer />

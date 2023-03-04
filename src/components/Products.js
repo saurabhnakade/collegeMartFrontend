@@ -10,7 +10,6 @@ const Container = styled.div`
 `;
 
 const Products = ({ cat }) => {
-  console.log(cat);
   return (
     <Container>
       {popularProducts.map((item) => (
