@@ -1,9 +1,11 @@
 import { Add, Remove } from "@material-ui/icons";
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
+import { popularProducts } from "../data";
 
 const Container = styled.div``;
 
@@ -80,16 +82,25 @@ const Button = styled.button`
 `;
 
 const Product = () => {
+  const location = useLocation();
+  const path = location.pathname.split("/")[2];
+  console.log(location);
+  console.log(path);
+
+  const item=popularProducts[path];
+
+  console.log(popularProducts[path-1]);
+
   return (
     <Container>
       <Navbar />
       <Announcement />
       <Wrapper>
         <ImgContainer>
-          <Image src="https://images.unsplash.com/photo-1601001435957-74f0958a93fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHN0YXRpb25lcnl8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" />
+          <Image src={item.img} />
         </ImgContainer>
         <InfoContainer>
-          <Title>Books Set</Title>
+          <Title>{item.title}</Title>
           <Desc>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</Desc>
           <Price>$30</Price>
           <AddContainer>
